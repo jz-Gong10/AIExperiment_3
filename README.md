@@ -9,6 +9,8 @@
 以下命令在已经配置好的 Docker 容器里执行。如果目前在宿主机上，先用
 `docker ps` 查找容器，再运行 `docker exec -it 容器名 /bin/bash`。
 如果队友使用 Conda，进入容器后还需激活她配置好的同一个环境。
+若当前 Python 已通过 `check_server.py` 的依赖和设备运算检查，可直接使用当前环境，
+无需额外激活 Conda。容器的默认 Python 本身也可以是已配置好的实验环境。
 
 ```bash
 mkdir -p /workspace/gjz_3
