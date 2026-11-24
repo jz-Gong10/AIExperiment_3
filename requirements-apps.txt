@@ -1,0 +1,4 @@
+# Only install if the existing container is missing this application version.
+# Use --no-deps to preserve the preconfigured DCU torch and torchvision packages:
+# python -m pip install --no-deps -r requirements-apps.txt
+ultralytics==8.4.176

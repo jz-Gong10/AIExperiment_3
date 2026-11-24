@@ -1,0 +1,20 @@
+[
+  {
+    "path": "data/general.mp4",
+    "bytes": 48575513,
+    "sha256": "e5c92cc87d3986a067335aeb06914d947482b1cfc06fb36dcd425b95699bcde5",
+    "source": "Original experiment 2 basketball video supplied in the local project."
+  },
+  {
+    "path": "models/yolo26n.pt",
+    "bytes": 5544453,
+    "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "source": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt"
+  },
+  {
+    "path": "models/yolo26s.pt",
+    "bytes": 20422725,
+    "sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+    "source": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26s.pt"
+  }
+]

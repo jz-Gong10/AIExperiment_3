@@ -1,0 +1,8 @@
+{
+  "device": "0",
+  "sources": {
+    "heatmap": "data/general.mp4",
+    "counting": "data/general.mp4"
+  },
+  "max_frames": null
+}
