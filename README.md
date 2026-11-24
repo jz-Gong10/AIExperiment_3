@@ -103,6 +103,34 @@ python 03_counting.py --variant baseline --no-display
 并下载结果视频查看效果。只有完整处理或相同帧范围的累计计数才适合横向比较。
 50 帧 smoke 结果仅用于检查。再次汇总可执行 `python collect_results.py`。
 
+## 报告截图与已有结果图
+
+在项目目录执行以下命令，分别截图。它们读取已有记录，不会训练模型：
+
+```bash
+python report_capture.py env
+python report_capture.py data
+python report_capture.py apps
+python report_capture.py train --run smoke_n
+```
+
+`env` 显示此前保存的环境检查；`data` 显示本项目 `data_box.yaml` 和数据文件数；
+`apps` 选取两项应用最近一次完整运行，无完整运行时明确显示部分运行；
+`train` 显示指定训练目录的配置与末轮 CSV 指标。末轮指标不一定对应最优权重；
+推理耗时应以真实验证输出为准。
+
+收集本次应用视频的同帧结果图片和已有训练图，可执行：
+
+```bash
+python report_capture.py figures --run smoke_n
+```
+
+它从两段真实输出视频提取同一帧，复制训练目录中已有的结果图和参数文件，
+生成 `report_materials/` 与 `report_materials.zip`。不会重新推理、训练或弹出窗口。
+默认是第 1000 帧，若可用帧数不足则使用两组都存在的帧。
+将压缩包传回本地后可查看原图并插入报告。正式训练完成后，
+将 `--run smoke_n` 换成实际正式实验目录，分别收集每组结果。
+
 ## 文件来源
 
 `data/general.mp4` 为本地实验二已有篮球视频。

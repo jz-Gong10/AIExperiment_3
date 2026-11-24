@@ -5,6 +5,8 @@ __pycache__/
 results/
 screenshots/
 reports/
+report_materials/
+runs_box/
 *.zip
 *.part
 ~$*
