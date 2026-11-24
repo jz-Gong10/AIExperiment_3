@@ -7,6 +7,10 @@ screenshots/
 reports/
 report_materials/
 runs_box/
+box_validation/
+box_protocol.json
+data_box.yaml
+logs/
 *.zip
 *.part
 ~$*
