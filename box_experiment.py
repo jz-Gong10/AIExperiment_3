@@ -56,7 +56,10 @@ def inspect_data(path):
     base = Path(config.get('path', path.parent))
     if not base.is_absolute():
         base = path.parent / base
-    result = {'config_sha256': digest(path), 'class_names': names, 'splits': {}}
+    # JSON object keys are strings; match the representation in saved protocols.
+    # This also accepts existing protocols without modifying their contents/hash.
+    saved_names = {str(key): value for key, value in names.items()} if isinstance(names, dict) else names
+    result = {'config_sha256': digest(path), 'class_names': saved_names, 'splits': {}}
     image_sets = {}
     for split in ('train', 'val'):
         images = Path(config[split])
